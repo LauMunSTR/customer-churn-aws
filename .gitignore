@@ -19,6 +19,12 @@ data/processed/*
 # Raw data
 data/raw/*
 
+# Processed data
+data/processed/*
+
+# SQL databases
+data/*.db
+
 # OS files
 .DS_Store
 Thumbs.db
