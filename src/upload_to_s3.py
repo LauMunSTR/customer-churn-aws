@@ -1,13 +1,15 @@
-import boto3
+from s3_utils import upload_file_to_s3
 
-s3 = boto3.client('s3')
 
 BUCKET_NAME = "customer-churn-aws-lautaro"
 
-LOCAL_FILE = "README.md"
+LOCAL_FILE = "models/customer_churn_model.pkl"
 
-S3_FILE = "README.md"
+S3_FILE = "models/customer_churn_model.pkl"
 
-s3.upload_file(LOCAL_FILE, BUCKET_NAME, S3_FILE)
 
-print("File uploaded successfully to S3 bucket.")
+upload_file_to_s3(
+    LOCAL_FILE,
+    BUCKET_NAME,
+    S3_FILE
+)
